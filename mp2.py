@@ -70,11 +70,11 @@ while n > 0:
 	# change centroid step
 	print("iteration ", 10-n+1, ":", sep="")
 	print("before... ", centroid)
-	for i in range(0, k):			#for each centroid value	
-	    ind = assignment[i]  #get the centroid designation of each point
+	for i in range(0, k):			#for each centroid value		    
 	    for j in range(0, features): #going through each feature
-	        sum_arr = []  #set a sum array        
+	        sum_arr = []  #set a sum array	        
 	        for l in range(0, len(vals)): #going through each point
+	            ind = assignment[l];
 	            if ind == i:	# if it matches the centroid's designation
 	                sum_arr.append(vals[l][j])  #append that value to the sum_arr                
 	        if len(sum_arr) > 0:
