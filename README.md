@@ -9,4 +9,4 @@ _mp2.py_ is the program for basic k-means clustering given a dataset in text-for
 
 _mp2-img.py_ is the program for image compression using the k-means clustering method.
 
-*Run the program* with _python3_ command.
+**Run the program** with _python3_ command.
