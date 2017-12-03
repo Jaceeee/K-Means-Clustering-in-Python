@@ -25,6 +25,7 @@ for i in range(0, len(vals)):
 	vals[i] = (tmp[0], tmp[1])
 # print(vals)
 
+#TODO make this generic
 minx = min([arr[0] for arr in vals])
 maxx = max([arr[0] for arr in vals])
 miny = min([arr[1] for arr in vals])
