@@ -1,6 +1,6 @@
 # K-Means-Clustering-in-Python
 
-##These are the build dependencies:
+## These are the build dependencies:
 - Python3
 - Matplotlib3
 - PIL
