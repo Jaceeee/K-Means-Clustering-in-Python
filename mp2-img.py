@@ -71,14 +71,14 @@ while n > 0:
 		for j in range(0, features):
 			sum_arr = []
 			for l in range(0, len(img_arr)):
-				ind = assignment
+				ind = assignment[l]
 				if ind == i:
 					sum_arr.append(img_arr[l][j])
 			if len(sum_arr) > 0:
 				centroid[i][j] = statistics.mean(sum_arr)
 
 	# print("after... ", centroid)
-	
+
 	n -= 1
 
 #reassignment into pix
