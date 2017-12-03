@@ -1,9 +1,9 @@
 # K-Means-Clustering-in-Python
 
 #### These are the build dependencies:
-- Python3
-- Matplotlib3
-- PIL
+- Python 3 (my version's 3.5.2)
+- Matplotlib (version == 1.5.1; for the graphing)
+- Pillow (version == 3.1.2; for the image manipulation)
 
 _mp2.py_ is the program for basic k-means clustering given a dataset in text-form.
 
