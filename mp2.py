@@ -63,6 +63,7 @@ while n > 0:
 
 	# reduces the differences array into a matrix of differences
 	# uses the assignment array to indicate which cluster it belongs to
+	# the index of differences array in that particular iteration will then be reduced to a single value
 	# print(differences_array)
 	assignment = []
 	for i in range(0, len(vals)):		
@@ -94,7 +95,6 @@ while n > 0:
 	        	centroid[i][j] = statistics.mean(sum_arr)
 
 	# print("after...  ", centroid)
-	#TODO insert file writing of centroid locations into "iter<n>_cm.txt"	
 	output_file_cm = open(output_file_paths+'iter'+str(10-n+1)+'_cm.txt', 'w+')
 	to_file_output_centroid = ''
 
