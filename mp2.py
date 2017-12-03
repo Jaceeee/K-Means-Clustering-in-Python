@@ -1,7 +1,9 @@
 import random
 import math
 import statistics
+import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 # constructing the array using list comprehensions
 # file_path = '/home/jaceroldan/Documents/3rd Year/Introduction to Artificial Intelligence/Machine Problems/2/Machine Problem 2/kmdata1.txt'
 file_path = './files/kmdata1.txt'
@@ -114,6 +116,20 @@ while n > 0:
 	output_file_cm.close()
 	n -= 1
 
-plt.plot([e[0] for e in vals],[e[1] for e in vals], 'ro')
+x_array = [e[0] for e in vals]
+y_array = [e[1] for e in vals]
+
+x_array.append(centroid[0][0])
+x_array.append(centroid[1][0])
+x_array.append(centroid[2][0])
+y_array.append(centroid[0][1])
+y_array.append(centroid[1][1])
+y_array.append(centroid[2][1])
+
+print(centroid)
+
+colors = cm.rainbow(np.linspace(0, 1, len(y_array)))
+
+plt.scatter(x_array, y_array, c=colors)
 plt.axis([0, 10, 0, 10])
 plt.show()
