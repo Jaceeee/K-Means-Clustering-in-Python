@@ -77,7 +77,7 @@ while n > 0:
 		means_array.append([])
 
 	# change centroid step
-	print("iteration ", 10-n+1, ":", sep="")
+	# print("iteration ", 10-n+1, ":", sep="")
 	# print("before... ", centroid)
 	for i in range(0, k):			#for each centroid value		    
 	    for j in range(0, features): #going through each feature
