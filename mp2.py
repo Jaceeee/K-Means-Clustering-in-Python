@@ -1,6 +1,7 @@
 import random
 import math
 import statistics
+import matplotlib.pyplot as plt
 # constructing the array using list comprehensions
 # file_path = '/home/jaceroldan/Documents/3rd Year/Introduction to Artificial Intelligence/Machine Problems/2/Machine Problem 2/kmdata1.txt'
 file_path = './files/kmdata1.txt'
@@ -112,3 +113,7 @@ while n > 0:
 
 	output_file_cm.close()
 	n -= 1
+
+plt.plot([e[0] for e in vals],[e[1] for e in vals], 'ro')
+plt.axis([0, 10, 0, 10])
+plt.show()
