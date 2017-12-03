@@ -108,6 +108,7 @@ while n > 0:
 	
 	to_file_output_centroid = to_file_output_centroid + str(cost) + '\n' + str(dj)
 
-	print(to_file_output_centroid)
+	output_file_cm.write(to_file_output_centroid)
+
 	output_file_cm.close()
 	n -= 1
