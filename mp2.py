@@ -126,7 +126,7 @@ while n > 0:
 	colors = cm.rainbow(np.linspace(0, 1, len(y_array)))
 
 	plt.scatter(x_array, y_array, c='red')
-	plt.scatter([c[0] for c in centroid], [c[1] for c in centroid], c='blue')	
+	plt.scatter([c[0] for c in centroid], [c[1] for c in centroid], sizes=[155,155],marker='x', c='blue')	
 	plt.axis([0, 10, 0, 10])	
 	plt.savefig(graph_file+str(10-n+1)+'.png')
 	plt.gcf().clear()		

@@ -97,4 +97,5 @@ for i in range(0, 128):
 		print("it = ",i*128+j,": ", dest_img[i*128+j])
 		pix[i,j] = tuple(dest_img[i*128+j])
 
+im.save('./output_comp/output.png')
 im.show() #print modified image
