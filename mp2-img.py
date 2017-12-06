@@ -10,6 +10,9 @@ MAX = 16384
 
 img_arr = [] #container for all the pixel values
 pix = im.load() #variable used for containing all the raw pixel values for manipulation
+# tuple = non-editable
+# list (array in C) = editable
+# tuple1 = tuple2
 
 im.show() #print original image
 
@@ -33,8 +36,7 @@ for i in range(len(img_arr)):
 
 centroid = []
 
-for i in range(0, k):
-	centroid.append(img_arr[random.randint(0, 16384)])
+
 
 inp = 10
 n = inp

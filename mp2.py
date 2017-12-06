@@ -117,20 +117,39 @@ while n > 0:
 	output_file_cm.close()
 	n -= 1
 
+
+x_array = []
+y_array = []
+
+for i in range(0, len(centroid)):
+	x_array.append(centroid[i][0])
+	y_array.append(centroid[i][1])
+	vals.append(centroid[i])
+
 x_array = [e[0] for e in vals]
 y_array = [e[1] for e in vals]
 
-x_array.append(centroid[0][0])
-x_array.append(centroid[1][0])
-x_array.append(centroid[2][0])
-y_array.append(centroid[0][1])
-y_array.append(centroid[1][1])
-y_array.append(centroid[2][1])
+# x_array.append(centroid[0][0])
+# x_array.append(centroid[1][0])
+# x_array.append(centroid[2][0])
+# y_array.append(centroid[0][1])
+# y_array.append(centroid[1][1])
+# y_array.append(centroid[2][1])
 
 print(centroid)
 
 colors = cm.rainbow(np.linspace(0, 1, len(y_array)))
 
-plt.scatter(x_array, y_array, c=colors)
+def c_checker(x, y, centroid):
+	for i in range(0, len(centroid)):
+		if x == centroid[0] and y == centroid[y]:
+			return True
+	return False
+
+colors_arr = [('r' if (c_checker(p[0],p[1],centroid)) else 'b') for p in vals]
+
+
+plt.scatter(x_array, y_array, c=colors_arr)
+
 plt.axis([0, 10, 0, 10])
 plt.show()
