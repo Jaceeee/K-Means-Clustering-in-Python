@@ -10,6 +10,7 @@ file_path = './files/kmdata1.txt'
 output_file_paths = './output/'
 
 file = open(file_path, 'r')
+graph_file = "./graphs/output_graph"
 
 vals = file.readlines()
 
@@ -115,16 +116,18 @@ while n > 0:
 	output_file_cm.write(to_file_output_centroid)
 
 	output_file_cm.close()
-	x_array = [e[0] for e in vals]
-	
+	x_array = [e[0] for e in vals]	
 	y_array = [e[1] for e in vals]
 
 	print(centroid)
+	print(len(x_array))
+	print(len(y_array))
 
 	colors = cm.rainbow(np.linspace(0, 1, len(y_array)))
 
 	plt.scatter(x_array, y_array, c='red')
-	plt.scatter([c[0] for c in centroid], [c[1] for c in centroid], c='blue')
-	plt.axis([0, 10, 0, 10])
-	plt.show()
+	plt.scatter([c[0] for c in centroid], [c[1] for c in centroid], c='blue')	
+	plt.axis([0, 10, 0, 10])	
+	plt.savefig(graph_file+str(10-n+1)+'.png')
+	plt.gcf().clear()		
 	n -= 1
