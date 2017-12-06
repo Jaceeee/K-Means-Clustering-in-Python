@@ -6,7 +6,6 @@ import statistics
 im = Image.open("./files/kmimg1.png")
 features = 3
 k = 16
-MAX = 16384
 
 img_arr = [] #container for all the pixel values
 pix = im.load() #variable used for containing all the raw pixel values for manipulation
@@ -22,18 +21,16 @@ for i in range(0, 128):
         # print(pix[i,j])
         img_arr.append(list(pix[i,j]))        
 
-for i in range(0, 16384):
-	for j in range(0, features):
-		img_arr[i][j] = int(img_arr[i][j])
 #insert compression code/k-means clustering here
 
 #used to contain the modified pixels in list form
 #but they must be in tuple form before reassignment to pix
-
 dest_img = []
-for i in range(len(img_arr)):
-	dest_img.append(tuple(img_arr[i]))
+for i in range(len(img_arr)):	
+	tuple(img_arr)
+	dest_img.append(img_arr[i])
 
+# print(dest_img)
 centroid = []
 
 
@@ -86,17 +83,9 @@ while n > 0:
 
 	n -= 1
 
-# compress the image by assigning the new intensity values
-# of centroids
-for i in range(0, MAX):
-	dest_img[i] = ([int(e) for e in centroid[assignment[i]] ])
-
-# print(dest_img)
-
 #reassignment into pix
 for i in range(0, 128):
 	for j in range(0, 128):
-		print("it = ",i*128+j,": ", dest_img[i*128+j])
 		pix[i,j] = tuple(dest_img[i*128+j])
 
 im.show() #print modified image
